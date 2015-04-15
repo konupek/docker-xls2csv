@@ -6,3 +6,5 @@ MAINTAINER Petr Konupek <petr@konupek.cz>
 RUN yum -y install python-yaml
 RUN git clone https://github.com/konupek/xlsx2csv-convertor.git /var/convertor
 RUN ln -s /var/convertor/start_conversion.sh /usr/bin/start_conversion.sh
+
+ENTRYPOINT python /var/convertor/run.py
