@@ -9,11 +9,12 @@ Image itself **does not** contain shared directory setup and you have to pass it
 
 An example structure of shared directory:
 
-    shared
-	    +--config
-	    |  +--config.yaml
-	    +--input
-	    +--output
+    data
+	    +--in
+	    |  +files
+	    +--out
+	    |  +files
+	    +--config.yml
 
 An example of **config.yaml**:
 
