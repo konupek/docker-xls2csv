@@ -19,14 +19,14 @@ An example of **config.yaml**:
 
 ```yaml
 path:
-  input: '/var/shared/input/'
-  output: '/var/shared/output/'
+  input: '/data/in/files/'
+  output: '/data/out/files/'
 ```
 
 Now you can simply place your .XLS or .XLSX files to the input directory and run container as shown below:
 
 ```bash
-docker run -v /YOUR_HOST_PATH/shared/:/var/shared/ konupek/docker-xls2csv sh start_conversion.sh
+docker run -v /YOUR_HOST_PATH/data/:/data/ konupek/docker-xls2csv
 ```
 
 After successful run you will find find results of conversion in your output directory.
