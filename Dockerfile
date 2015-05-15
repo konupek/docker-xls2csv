@@ -1,10 +1,10 @@
-#VERSION 1.0.1
+#VERSION 1.0.3
 FROM konupek/docker-base-python
 MAINTAINER Petr Konupek <petr@konupek.cz>
 
 # Install XLSX2CSV
 RUN yum -y install python-yaml
+RUN yum -y install python-xlrd
 RUN git clone https://github.com/konupek/xlsx2csv-convertor.git /var/convertor
-RUN ln -s /var/convertor/start_conversion.sh /usr/bin/start_conversion.sh
 
-ENTRYPOINT python /var/convertor/run.py
+ENTRYPOINT python /var/convertor/run.py -d /data/
