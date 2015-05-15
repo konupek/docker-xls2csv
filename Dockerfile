@@ -4,7 +4,7 @@ MAINTAINER Petr Konupek <petr@konupek.cz>
 
 # Install XLSX2CSV
 RUN yum -y install python-yaml
-RUN yum -y install python-xlrd
+RUN  easy_install xlrd
 RUN git clone https://github.com/konupek/xlsx2csv-convertor.git /var/convertor
 
 ENTRYPOINT python /var/convertor/run.py -d /data/
